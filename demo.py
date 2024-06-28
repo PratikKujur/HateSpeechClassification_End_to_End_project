@@ -7,4 +7,4 @@ from hate.configuration.gcloud_syncer import GCloudSync
 
 obj=GCloudSync()
 
-obj.sync_folder_from_gcloud("hate_speech_classification_dataset","dataset.zip","dataset.zip")
+obj.sync_folder_from_gcloud("hate_speech_classification_dataset","dataset.zip","download/dataset.zip")
