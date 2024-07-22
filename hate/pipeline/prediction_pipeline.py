@@ -69,7 +69,7 @@ class PredictionPipeline:
         except Exception as e:
             raise CustomException(e, sys) from e
 
-    
+     
     def run_pipeline(self,text):
         logging.info("Entered the run_pipeline method of PredictionPipeline class")
         try:
