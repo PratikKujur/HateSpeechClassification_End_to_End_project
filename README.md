@@ -33,7 +33,7 @@ Now,
 ```bash
 open up you local host and port
 ```
-## Demo of the UI, for both "hate" and "no hate".
+## Demo of the UI, for both on "hate" and "no hate" sentence.
 # 1)
 
 ![hate_speech](https://github.com/user-attachments/assets/a37a35bc-656e-48cc-bd7a-455234926d2e)
