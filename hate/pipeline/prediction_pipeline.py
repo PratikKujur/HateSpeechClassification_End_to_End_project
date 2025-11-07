@@ -12,6 +12,7 @@ from hate.configuration.gcloud_syncer import GCloudSync
 from hate.components.data_transformation import DataTransformation
 from hate.entity.config_entity import DataTransformationConfig
 from hate.entity.artifact_entity import DataIngestionArtifacts
+from tensorflow.keras.layers import SpatialDropout1D
 
 class PredictionPipeline:
     def __init__(self):
@@ -45,8 +46,8 @@ class PredictionPipeline:
         """load image, returns cuda tensor"""
         logging.info("Running the predict function")
         try:
-            #best_model_path:str = self.get_model_from_gcloud()
-            load_model=keras.models.load_model(best_model_path,custom_objects={"SpatialDropout1D": SpatialDropout1D})
+            best_model_path:str = self.get_model_from_gcloud()
+            load_model=keras.models.load_model(best_model_path)
             with open('tokenizer.pickle', 'rb') as handle:
                 load_tokenizer = pickle.load(handle)
             
