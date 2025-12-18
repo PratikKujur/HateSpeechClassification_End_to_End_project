@@ -47,7 +47,7 @@ class PredictionPipeline:
         logging.info("Running the predict function")
         try:
             best_model_path:str = self.get_model_from_gcloud()
-            load_model=keras.models.load_model(best_model_path)
+            load_model=keras.models.load_model(best_model_path,custom_objects={"SpatialDropout1D": SpatialDropout1D})
             with open('tokenizer.pickle', 'rb') as handle:
                 load_tokenizer = pickle.load(handle)
             
